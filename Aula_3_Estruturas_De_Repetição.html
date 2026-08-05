@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabuada Interativa</title>
+  <style>
+    /* Aqui definimos o estilo visual da página */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #1e3c72, #a18cd1); /* azul e roxo claro */
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+    input, button {
+      padding: 8px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #1e3c72;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    li {
+      background: #a18cd1;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gerador de Tabuada</h1>
+  <p>Digite um número entre 1 e 10:</p>
+  <input type="number" id="numero" min="1" max="10" required>
+  <button onclick="gerarTabuada()">Gerar Tabuada</button>
+  
+  <h2>Resultado:</h2>
+  <ul id="resultado"></ul>
+  
+  <script>
+    /* Função principal que gera a tabuada */
+    function gerarTabuada() {
+      const num = document.getElementById('numero').value; // pega o número digitado
+      const lista = document.getElementById('resultado');  // pega a lista onde vamos mostrar os resultados
+      lista.innerHTML = ""; // limpa resultados anteriores
+      
+      // validação: só aceita números entre 1 e 10
+      if (num < 1 || num > 10) {
+        alert("Por favor, insira um número entre 1 e 10.");
+        return;
+      }
+      
+      // loop de 1 até 10 para calcular a tabuada
+      for (let i = 1; i <= 10; i++) {
+        const item = document.createElement('li'); // cria um item da lista
+        item.textContent = `${num} x ${i} = ${num * i}`; // define o texto do item
+        lista.appendChild(item); // adiciona o item na lista
+      }
+    }
+  </script>
+</body>
+</html>
