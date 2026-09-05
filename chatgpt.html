@@ -1,0 +1,29 @@
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Configura a codificação de caracteres para suportar acentos -->
+    <title>Consumo API - ChatGPT</title> <!-- Título da aba do navegador -->
+    <link rel="stylesheet" href="chatgpt.css"> <!-- Importa o arquivo CSS para estilizar a página -->
+</head>
+<body>
+    <!-- Formulário principal -->
+    <form action="" id="formQuestion">
+        <h1>Pergunte ao ChatGPT</h1> <!-- Título visível na página -->
+        
+        <!-- Campo de entrada de texto -->
+        <label for="question">Formule a pergunta</label><br>
+        <input type="text" id="question" name="question"><br><br>
+        
+        <!-- Botão que chama a função consultaChat() -->
+        <button type="button" onclick="consultaChat()">Perguntar</button><br><br>
+        
+        <!-- Área para mostrar a pergunta digitada -->
+        <div id="pergunta"></div><br>
+        
+        <!-- Área para mostrar a resposta da API -->
+        <div id="resposta"></div>
+    </form>
+
+    <!-- Importa o arquivo JavaScript que contém a lógica -->
+    <script src="chatgpt.js"></script>
+</body>
+</html>

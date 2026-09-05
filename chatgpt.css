@@ -1,0 +1,12 @@
+/* Estiliza o formulário principal */
+#formQuestion {
+    text-align: center; /* Centraliza o conteúdo dentro do formulário */
+    width: 50%;         /* Define a largura como metade da tela */
+    margin-left: auto;  /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+}
+
+/* Estiliza o campo de entrada de texto */
+input {
+    width: 350px; /* Aumenta a largura da caixa de texto */
+}
